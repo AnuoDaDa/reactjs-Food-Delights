@@ -404,8 +404,10 @@
                         </div>
                     </div>
                     <!--列表内容-->
-                    <div class="tablebody" id="material_cont">
-                    </div>
+                    <div id="app-material"></div>
+                    <script type="text/javascript" src="react/material.all.js"></script>
+                    <!--<div class="tablebody" id="material_cont">-->
+                    <!--</div>-->
                 </div>
                 <!--页码块-->
                 <footer class="footer">
@@ -548,26 +550,28 @@
 
                 <!--弹出删除食材警告窗口-->
                 <div class="modal fade" id="deleteMaterial" role="dialog" aria-labelledby="gridSystemModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="container-fluid">
-                                    确定要删除该食材？删除后不可恢复！
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal" id="MaterialCancel">取 消</button>
-                                <button type="button" class="btn  btn-xs btn-danger" id="deMaterialCheck">保 存</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
+                    <div id="app-deMaterial"></div>
+                    <script type="text/javascript" src="react/deMaterial.all.js"></script>
+                    <!--<div class="modal-dialog" role="document">-->
+                        <!--<div class="modal-content">-->
+                            <!--<div class="modal-header">-->
+                                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+                                            <!--aria-hidden="true">&times;</span></button>-->
+                                <!--<h4 class="modal-title" id="gridSystemModalLabel">提示</h4>-->
+                            <!--</div>-->
+                            <!--<div class="modal-body">-->
+                                <!--<div class="container-fluid">-->
+                                    <!--确定要删除该食材？删除后不可恢复！-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="modal-footer">-->
+                                <!--<button type="button" class="btn btn-xs btn-white" data-dismiss="modal" id="MaterialCancel">取 消</button>-->
+                                <!--<button type="button" class="btn  btn-xs btn-danger" id="deMaterialCheck">保 存</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; /.modal-content &ndash;&gt;-->
+                    <!--</div>-->
+                     <!--/.modal-dialog-->
                 </div>
                 <!-- /.modal -->
 
@@ -3049,25 +3053,25 @@
 
     $(function () {
         //食材管理
-        $('#materialMang').click(function () {
-            $('#material_cont').children().remove();
-            var url ="http://localhost:8000/material";
-            $.get(url,function(data,status){
-                var materials=JSON.parse(data).materials;
-                materials.forEach(function (material) {
-                    var str='<div class="row" id="material'+material.id+'" data-img="'+material.imageKey+'">' +
-                        '<div class="col-xs-2 ">'+material.type+'</div>' +
-                        '<div class="col-xs-2 ">'+material.type_name+'</div>' +
-                        '<div class="col-xs-2 "><img width="50px" height="50px" src="'+material.imageKey+'"></div>' +
-                        '<div class="col-xs-2">' +
-                        '<button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseMaterial" onclick="updateMaterial('+material.id+')">修改</button>' +
-                        '<button class="btn btn-danger btn-xs" data-toggle="modal"  data-target="#deleteMaterial"  onclick="deleteMaterial('+material.id+')">删除</button>' +
-                        '</div>' +
-                        '</div>';
-                    $('#material_cont').append(str);
-                })
-            });
-        })
+        // $('#materialMang').click(function () {
+        //     $('#material_cont').children().remove();
+        //     var url ="http://localhost:8000/material";
+        //     $.get(url,function(data,status){
+        //         var materials=JSON.parse(data).materials;
+        //         materials.forEach(function (material) {
+        //             var str='<div class="row" id="material'+material.id+'" data-img="'+material.imageKey+'">' +
+        //                 '<div class="col-xs-2 ">'+material.type+'</div>' +
+        //                 '<div class="col-xs-2 ">'+material.type_name+'</div>' +
+        //                 '<div class="col-xs-2 "><img width="50px" height="50px" src="'+material.imageKey+'"></div>' +
+        //                 '<div class="col-xs-2">' +
+        //                 '<button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseMaterial" onclick="updateMaterial('+material.id+')">修改</button>' +
+        //                 '<button class="btn btn-danger btn-xs" data-toggle="modal"  data-target="#deleteMaterial"  onclick="deleteMaterial('+material.id+')">删除</button>' +
+        //                 '</div>' +
+        //                 '</div>';
+        //             $('#material_cont').append(str);
+        //         })
+        //     });
+        // })
 
         //食材添加
         $('#addMaterial').click(function () {
