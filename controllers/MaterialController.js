@@ -115,6 +115,7 @@ exports.addMaterial = function (req, res) {
 exports.deMaterial = function (req, res) {
     var id=req.body.id;
     var result;
+    console.log(id)
     //链接数据库
     material = new Wechat();
     material.init();

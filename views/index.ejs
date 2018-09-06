@@ -443,108 +443,15 @@
 
                 <!--弹出添加食材窗口-->
                 <div class="modal fade" id="add_material" role="dialog" aria-labelledby="gridSystemModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="gridSystemModalLabel">添加食材</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="container-fluid">
-                                    <form class="form-horizontal">
-                                        <div class="form-group ">
-                                            <label for="sName" class="col-xs-3 control-label">食材类型：</label>
-                                            <div class="col-xs-8 ">
-                                                <input type="text" class="form-control input-sm duiqi" id="add_material_type"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="sKnot" class="col-xs-3 control-label">类型名称 ：</label>
-                                            <div class="col-xs-8">
-                                                <!--<select class=" form-control select-duiqi" id="creatorList">-->
-                                                <!--</select>-->
-                                                <input type="text" class="form-control input-sm duiqi" id="add_material_name"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group ">
-                                            <label for="sName" class="col-xs-3 control-label">封  面：</label>
-                                            <div class="col-xs-8 ">
-                                                <label class="inline" id="Material_img">
-                                                    <div id="uploader-demo">
-                                                        <!--用来存放item-->
-                                                        <div id="fileList" class="uploader-list"></div>
-                                                        <div id="materialPicker">选择图片</div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal" id="addcancel">取 消</button>
-                                <button type="button" class="btn btn-xs btn-green" id="addMaterial">保 存</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
+                    <div id="app-addMaterial"></div>
+                    <script type="text/javascript" src="react/addMaterial.all.js"></script>
                 </div>
                 <!-- /.modal -->
 
                 <!--弹出修改食材窗口-->
                 <div class="modal fade" id="reviseMaterial" role="dialog" aria-labelledby="gridSystemModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="gridSystemModalLabel">修改食材</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="container-fluid">
-                                    <form class="form-horizontal">
-                                        <div class="form-group ">
-                                            <label for="sName" class="col-xs-3 control-label">食材类型：</label>
-                                            <div class="col-xs-8 ">
-                                                <input type="text" class="form-control input-sm duiqi" id="update_material_type"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="sKnot" class="col-xs-3 control-label">类型名称 ：</label>
-                                            <div class="col-xs-8">
-                                                <input type="text" class="form-control input-sm duiqi" id="update_material_name"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group ">
-                                            <label for="sName" class="col-xs-3 control-label">封  面：</label>
-                                            <div class="col-xs-8 ">
-                                                <label class="inline">
-                                                    <div id="uploader-demo">
-                                                        <!--用来存放item-->
-                                                        <div id="fileList" class="uploader-list"></div>
-                                                        <div id="materialUpdate">更改图片</div>
-                                                    </div>
-                                                </label>
-                                                <img width="100px" height="100px" src="" alt="" id="update_material_img">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal" id="updateMater_C">取 消</button>
-                                <button type="button" class="btn btn-xs btn-green" id="updateMaterial">保 存</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
-                    </div>
-                    <!-- /.modal-dialog -->
+                    <div id="app-upMaterial"></div>
+                    <script type="text/javascript" src="react/upMaterial.all.js"></script>
                 </div>
                 <!-- /.modal -->
 
@@ -552,26 +459,6 @@
                 <div class="modal fade" id="deleteMaterial" role="dialog" aria-labelledby="gridSystemModalLabel">
                     <div id="app-deMaterial"></div>
                     <script type="text/javascript" src="react/deMaterial.all.js"></script>
-                    <!--<div class="modal-dialog" role="document">-->
-                        <!--<div class="modal-content">-->
-                            <!--<div class="modal-header">-->
-                                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
-                                            <!--aria-hidden="true">&times;</span></button>-->
-                                <!--<h4 class="modal-title" id="gridSystemModalLabel">提示</h4>-->
-                            <!--</div>-->
-                            <!--<div class="modal-body">-->
-                                <!--<div class="container-fluid">-->
-                                    <!--确定要删除该食材？删除后不可恢复！-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="modal-footer">-->
-                                <!--<button type="button" class="btn btn-xs btn-white" data-dismiss="modal" id="MaterialCancel">取 消</button>-->
-                                <!--<button type="button" class="btn  btn-xs btn-danger" id="deMaterialCheck">保 存</button>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash; /.modal-content &ndash;&gt;-->
-                    <!--</div>-->
-                     <!--/.modal-dialog-->
                 </div>
                 <!-- /.modal -->
 
@@ -2706,71 +2593,52 @@
 </script>
 <script>
 
-    //食材删除
-    function deleteMaterial(id) {
-        $('#deMaterialCheck').click(function () {
-            var url ="http://localhost:8000/deMaterial";
-            $.post(url,{
-                    id:id
-                },
-                function(data,status){
-                    var result=JSON.parse(data);
-                    if(result==1){
-                        alert("删除失败，请重新删除！")
-                    }else{
-                        document.getElementById("material"+id).remove();
-                        $('#MaterialCancel').click();
-                    }
-                });
-        })
-    }
-
     //食材修改
-    function updateMaterial(id){
-        //将图片传入修改页面
-        var url ="http://localhost:8000/updateMaterialOn";
-        $.post(url,{
-                id:id,
-            },
-            function(data,status){
-                var materials=JSON.parse(data).materials;
-                $('#update_material_type').prop({
-                    value:materials.type
-                });
-                $('#update_material_name').prop({
-                    value:materials.type_name
-                });
-                $('#update_material_img').prop({
-                    src:materials.imageKey,
-                    name:materials.imageKey
-                })
-            });
-
-        $('#updateMaterial').unbind('click').click(function () {
-            var type=document.getElementById('update_material_type').value;
-            var type_name=document.getElementById('update_material_name').value;
-            var image=$('#update_material_img').attr('data-imgname');
-
-            var url ="http://localhost:8000/update_material";
-            $.post(url,{
-                    id:id,
-                    type:type,
-                    type_name:type_name,
-                    image:image
-                },
-                function(data,status){
-                    var result=JSON.parse(data);
-                    if(result==1){
-                        alert("修改失败，请重新修改！")
-                    }else{
-                        console.log('11111111')
-                        $('#updateMater_C').click();
-                        $('#materialMang').click();
-                    }
-                });
-        })
-
-    }
+    // function updateMaterial(id){
+    //     //将图片传入修改页面
+    //     var url ="http://localhost:8000/updateMaterialOn";
+    //     $.post(url,{
+    //             id:id,
+    //         },
+    //         function(data,status){
+    //             var materials=JSON.parse(data).materials;
+    //             $('#update_material_type').prop({
+    //                 value:materials.type
+    //             });
+    //             $('#update_material_name').prop({
+    //                 value:materials.type_name
+    //             });
+    //             $('#update_material_img').prop({
+    //                 src:materials.imageKey,
+    //                 name:materials.imageKey
+    //             })
+    //         });
+    //
+    //     $('#updateMaterial').unbind('click').click(function () {
+    //         var type=document.getElementById('update_material_type').value;
+    //         var type_name=document.getElementById('update_material_name').value;
+    //         var image=$('#update_material_img').attr('data-imgname');
+    //
+    //         var url ="http://localhost:8000/update_material";
+    //         $.post(url,{
+    //                 id:id,
+    //                 type:type,
+    //                 type_name:type_name,
+    //                 image:image
+    //             },
+    //             function(data,status){
+    //                 var result=JSON.parse(data);
+    //                 if(result==1){
+    //                     alert("修改失败，请重新修改！")
+    //                 }else{
+    //                     console.log('11111111')
+    //                     $('#updateMater_C').click();
+    //                     $('#materialMang').click();
+    //                 }
+    //             });
+    //     })
+    //
+    // }
 
     //三餐删除
     function deleteMeal(id) {
@@ -3074,38 +2942,38 @@
         // })
 
         //食材添加
-        $('#addMaterial').click(function () {
-            var material_type =$('#add_material_type').val();
-            var material_name=$('#add_material_name').val();
-            var material_img=$('#MaterialImg').attr('name');
-            var material_imgname=$('#MaterialImg').attr('data-imgname');
-            var url ="http://localhost:8000/addMaterial";
-            $.post(url,{
-                    material_type:material_type,
-                    material_name:material_name,
-                    material_img:material_img
-                },
-                function(data,status){
-                    var result=JSON.parse(data).result;
-                    if(result!=0){
-                        var str=' <div class="row"  id="material'+result+'">' +
-                            '<div class="col-xs-2 ">'+material_type+'</div>' +
-                            '<div class="col-xs-2 ">'+material_name+'</div>' +
-                            '<div class="col-xs-2 "><img  width="50px" height="50px" src="'+material_imgname+'"></div>' +
-                            '<div class="col-xs-2">' +
-                            '<button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseMaterial" onclick="updateMaterial('+result+')">修改</button>' +
-                            '<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteMaterial"  onclick="deleteMaterial('+result+')">删除</button>' +
-                            '</div>' +
-                            '</div>';
-                        $('#material_cont').append(str);
-                        $('#addcancel').click();
-                        $('#MaterialImg').remove();
-                    }else{
-                        alert('添加失败，请重新添加！')
-
-                    }
-                });
-        })
+        // $('#addMaterial').click(function () {
+        //     var material_type =$('#add_material_type').val();
+        //     var material_name=$('#add_material_name').val();
+        //     var material_img=$('#MaterialImg').attr('name');
+        //     var material_imgname=$('#MaterialImg').attr('data-imgname');
+        //     var url ="http://localhost:8000/addMaterial";
+        //     $.post(url,{
+        //             material_type:material_type,
+        //             material_name:material_name,
+        //             material_img:material_img
+        //         },
+        //         function(data,status){
+        //             var result=JSON.parse(data).result;
+        //             if(result!=0){
+        //                 var str=' <div class="row"  id="material'+result+'">' +
+        //                     '<div class="col-xs-2 ">'+material_type+'</div>' +
+        //                     '<div class="col-xs-2 ">'+material_name+'</div>' +
+        //                     '<div class="col-xs-2 "><img  width="50px" height="50px" src="'+material_imgname+'"></div>' +
+        //                     '<div class="col-xs-2">' +
+        //                     '<button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseMaterial" onclick="updateMaterial('+result+')">修改</button>' +
+        //                     '<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteMaterial"  onclick="deleteMaterial('+result+')">删除</button>' +
+        //                     '</div>' +
+        //                     '</div>';
+        //                 $('#material_cont').append(str);
+        //                 $('#addcancel').click();
+        //                 $('#MaterialImg').remove();
+        //             }else{
+        //                 alert('添加失败，请重新添加！')
+        //
+        //             }
+        //         });
+        // })
 
         //三餐管理
         $('#mealsMang').click(function () {

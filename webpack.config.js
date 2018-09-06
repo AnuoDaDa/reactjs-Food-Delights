@@ -3,6 +3,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         material: './src/material/material.js',
+        deMaterial:'./src/material/deMaterial.js',
+        addMaterial:'./src/material/addMaterial.js',
+        upMaterial:'./src/material/upMaterial.js',
    },
     plugins: [
         new CleanWebpackPlugin(['public/react'])
